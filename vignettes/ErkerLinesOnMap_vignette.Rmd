@@ -1,0 +1,28 @@
+---
+title: "ErkerLinesOnMap Vignette"
+author: "Tedward Erker"
+date: "May 11, 2015"
+output: rmarkdown::html_vignette
+---
+
+```{r}
+library(ErkerLinesOnMap)
+library(rgdal)
+library(ggplot2)
+library(ggmap)
+library(magrittr)
+```
+```{r}
+# Shapefile of the street centerlines from the city of Madison, WI
+street<-readOGR("StreetCenterLines","StreetCenterlines")
+street <- spTransform(street, CRS("+proj=longlat +datum=WGS84"))
+street %<>% fortify()
+```
+
+Use Functions From Erker_MapLine
+```{r}
+plot_fortifiedLines_onGGMAP(street)
+
+# Modify the zoom, color, and maptype
+plot_fortifiedLines_onGGMAP(street,zoom = 11,color = "color",maptype= "satellite")
+```
