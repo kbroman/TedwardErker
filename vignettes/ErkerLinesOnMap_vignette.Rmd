@@ -2,7 +2,7 @@
 title: "ErkerLinesOnMap Vignette"
 author: "Tedward Erker"
 date: "May 11, 2015"
-output: rmarkdown::html_vignette
+output: html_document
 ---
 
 ```{r}
