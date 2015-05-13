@@ -8,4 +8,5 @@ Maintainer: Tedward Erker <erker@wisc.edu>
 Description: plots a spatial lines object on top of a ggmap which is centered according to spatial lines
 License: MIT + file LICENSE
 Imports: ggplot2, ggmap
-Suggests: rgdal, testthat, magrittr
+Suggests: rgdal, testthat, magrittr, knitr, rmarkdown
+VignetteBuilder: knitr
