@@ -6,5 +6,5 @@ Date: 2015-05-11
 Author: Tedward Erker
 Maintainer: Tedward Erker <erker@wisc.edu>
 Description: plots a spatial lines object on top of a ggmap which is centered according to spatial lines
-License: MIT
+License: MIT + file LICENSE
 Suggests: rgdal, testthat, ggplot2, ggmap, magrittr
