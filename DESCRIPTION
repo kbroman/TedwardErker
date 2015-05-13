@@ -7,4 +7,5 @@ Author: Tedward Erker
 Maintainer: Tedward Erker <erker@wisc.edu>
 Description: plots a spatial lines object on top of a ggmap which is centered according to spatial lines
 License: MIT
-Suggests: rgdal, testthat, ggplot2, ggmap, magrittr
+Suggests: rgdal, testthat, ggplot2, ggmap, magrittr, knitr, rmarkdown
+VignetteBuilder: knitr

@@ -2,8 +2,14 @@
 title: "ErkerLinesOnMap Vignette"
 author: "Tedward Erker"
 date: "May 11, 2015"
-output: html_document
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ErkerLinesOnMap}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8](inputenc)
 ---
+
+Load some packages.
 
 ```{r}
 library(ErkerLinesOnMap)
@@ -12,6 +18,9 @@ library(ggplot2)
 library(ggmap)
 library(magrittr)
 ```
+
+Load shape files.
+
 ```{r}
 # Shapefile of the street centerlines from the city of Madison, WI
 street<-readOGR("StreetCenterLines","StreetCenterlines")
@@ -19,7 +28,8 @@ street <- spTransform(street, CRS("+proj=longlat +datum=WGS84"))
 street %<>% fortify()
 ```
 
-Use Functions From Erker_MapLine
+Use functions from `Erker_MapLine`.
+
 ```{r}
 plot_fortifiedLines_onGGMAP(street)
 
