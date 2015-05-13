@@ -12,6 +12,8 @@
 #'  # plot_fortifiedLines_onGGMAP(street)
 #'  @export
 #' 
+#'  @importFrom ggplot2 geom_path aes coord_map
+#'  @importFrom ggmap ggmap get_map
 plot_fortifiedLines_onGGMAP <- function(fortified_spatialLines, zoom = 12, color = "bw", maptype = "terrain") {
   street_paths <- geom_path(data = fortified_spatialLines,aes(y = lat, x = long, group = group))
   center<-get_map_center(ggplot()+street_paths)
